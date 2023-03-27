@@ -35,7 +35,7 @@ export const AddMessage = ({ route }) => {
                 <View style={{ flex: 1, }}>
                     <ImageBackground
                         source={require('../../Assets/Images/HomeScreen/backImage.png')}
-                        style={{ height: '82%', width: '100%' }}>
+                        style={{ height: '92%', width: '100%' }}>
                         <View style={{ margin: '5%' }}>
                             {/* Header */}
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -132,7 +132,10 @@ export const AddMessage = ({ route }) => {
                                     </Pressable>
                                 </View>
                                 <View style={{ backgroundColor: 'black', alignItems: 'center', padding: '4%', borderRadius: 10, marginHorizontal: '10%' }}>
-                                    <Pressable onPress={() => { Navigation.navigate('AddMoreDetail'); }}>
+                                    <Pressable onPress={() => {
+                                        Navigation.navigate('AddMoreDetail')
+                                        refRBSheet.current.close();
+                                    }}>
                                         <Ionicons
                                             name={'checkmark-outline'}
                                             size={25}

@@ -1,8 +1,8 @@
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useRef, useState } from 'react';
-import { Alert, Animated, Dimensions, Pressable, ScrollView, TouchableOpacity, View } from 'react-native';
+import { Animated, TouchableOpacity, View } from 'react-native';
 import { CurvedBottomBar } from 'react-native-curved-bottom-bar';
-import { Button, Text } from 'react-native-paper';
+import { Text } from 'react-native-paper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Home } from '../../Screens/Home';
 import { Notifications } from '../../Screens/Notifications';
@@ -10,18 +10,10 @@ import { Profile } from '../../Screens/Profile';
 import { Settings } from '../../Screens/Settings';
 import { styles } from './style';
 import { launchCamera } from 'react-native-image-picker';
-import BottomSheet from '../../Components/ReusableComponent/BottomSheet';
-import COLORS from '../../Assets/Style/Color';
-import Icons from 'react-native-vector-icons/MaterialIcons';
+
 
 const CurveBottomBar = () => {
   const Navigation = useNavigation();
-
-  const [bottomSHeetState, setBottomSHeetState] = useState(false);
-      // refRBSheet.current.open();
-  useEffect(()=>{
-      // refRBSheet.current.open();
-  },[])
 
   const _renderIcon = (routeName, selectedTab) => {
     let icon = '';
@@ -70,7 +62,7 @@ const CurveBottomBar = () => {
     );
   };
 
-  const openCamera = () => {
+  const openCamera1 = () => {
     let option = {
       include64: true,
       mediaType: 'photo',
@@ -81,7 +73,8 @@ const CurveBottomBar = () => {
         // setBanner(res.assets[0].uri);
         console.log('Response:', res.assets[0].uri);
         console.log(res);
-        Navigation.navigate('AddMessage', { imgUri: res.assets[0].uri })
+        console.log('custom bottom bar');
+        Navigation.navigate('AddMessage')
 
       } else if (res.didCancel) {
         console.log('cancel');
@@ -89,64 +82,9 @@ const CurveBottomBar = () => {
       }
     });
   };
-  const refRBSheet = useRef(null);
-  console.log('refRBSheet: ', refRBSheet.current);
-  // refRBSheet.current.open();
-
-  {
-    refRBSheet.current !== null &&
-      (
-        <BottomSheet refRBSheets={refRBSheet} height={160}>
-          <View
-            style={{
-              alignItems: 'flex-start',
-              margin: '8%',
-              flexDirection: 'row',
-              justifyContent: 'flex-start',
-            }}>
-            <View
-              style={{
-                marginLeft: 10,
-              }}>
-              <Pressable>
-                <View
-                  style={{
-                    backgroundColor: COLORS.primary,
-                    borderRadius: 25,
-                    width: 50,
-                    height: 50,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}>
-                  <Icons name="photo-camera" color={'#fff'} size={30} />
-                </View>
-              </Pressable>
-              <Text>Camera</Text>
-            </View>
-            <View
-              style={{
-                marginLeft: 40,
-              }}>
-              <Pressable>
-                <View
-                  style={{
-                    backgroundColor: COLORS.primary,
-                    borderRadius: 25,
-                    padding: 10,
-                  }}>
-                  <Icons name="photo-library" color={'#fff'} size={30} />
-                </View>
-              </Pressable>
-              <Text>Camera</Text>
-            </View>
-          </View>
-        </BottomSheet>
-      )
-  }
 
   return (
     <View style={{ flex: 1 }}>
-
       <CurvedBottomBar.Navigator
         style={{ backgroundColor: 'transparent' }}
         strokeWidth={5}
@@ -161,7 +99,7 @@ const CurveBottomBar = () => {
                 flex: 1,
                 justifyContent: 'center',
               }}
-              onPress={() => openCamera()}
+              onPress={() => openCamera1()}
             >
               <Ionicons name={'add'} style={{ fontWeight: 'bold' }} color={'#D2D2DE'} size={30} />
             </TouchableOpacity>

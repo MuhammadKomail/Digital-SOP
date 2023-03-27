@@ -8,7 +8,6 @@ export default function BottomSheet(props) {
         <SafeArea>
             <RBSheet
                 ref={props.refRBSheets}
-
                 closeOnDragDown={false}
                 closeOnPressMask={false}
                 height={props.height}
@@ -22,6 +21,7 @@ export default function BottomSheet(props) {
                         borderTopLeftRadius: 40,
                         borderTopRightRadius: 40,
                         alignSelf: 'center',
+                        zIndex: -100
                     },
                     wrapper: {
                         // zIndex: -500,

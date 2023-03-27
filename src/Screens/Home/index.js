@@ -17,6 +17,7 @@ export const Home = () => {
 
   const refRBSheet = useRef(null);
   useEffect(() => {
+    // refRBSheet.current.open()
   }, []);
 
   const height = Dimensions.get('window').height;
@@ -79,114 +80,114 @@ export const Home = () => {
             </View>
           </ImageBackground>
         </View >
-        <BottomSheet refRBSheets={refRBSheet} height={FilterHeight}>
-          <ScrollView>
-            <View style={{ marginVertical: '5%' }}>
+      </SafeArea>
+      <BottomSheet refRBSheets={refRBSheet} height={FilterHeight}>
+        <ScrollView>
+          <View style={{ marginVertical: '5%' }}>
 
-              <View style={{ paddingHorizontal: '8%' }}>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <View style={{ marginVertical: '5%' }}>
-                    <Text style={{ fontSize: 14 }}>Recent View</Text>
-                    <Text style={{ fontSize: 10 }}>All Digital SOP Guide</Text>
-                  </View>
-
-                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'center' }}>
-                    <View style={{ marginVertical: '5%' }}>
-                      <Pressable onPress={() => { console.log('press'); }}>
-                        <Ionicons
-                          name={'arrow-forward'}
-                          size={20}
-                          color={'black'}
-                        />
-                      </Pressable>
-                    </View>
-                  </View>
+            <View style={{ paddingHorizontal: '8%' }}>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View style={{ marginVertical: '5%' }}>
+                  <Text style={{ fontSize: 14 }}>Recent View</Text>
+                  <Text style={{ fontSize: 10 }}>All Digital SOP Guide</Text>
                 </View>
-                <View style={{ flexDirection: 'row', flex: 1 }}>
-                  <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
-                    <Image
-                      source={require('../../Assets/Images/HomeScreen/itemImg.png')}
-                      style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
-                    />
-                    <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
-                  </View>
-                  <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
-                    <Image
-                      source={require('../../Assets/Images/HomeScreen/itemImg.png')}
-                      style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
-                    />
-                    <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
+
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'center' }}>
+                  <View style={{ marginVertical: '5%' }}>
+                    <Pressable onPress={() => { console.log('press'); }}>
+                      <Ionicons
+                        name={'arrow-forward'}
+                        size={20}
+                        color={'black'}
+                      />
+                    </Pressable>
                   </View>
                 </View>
               </View>
-
-              <View style={{ paddingHorizontal: '8%' }}>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <View style={{ marginVertical: '5%' }}>
-                    <Text style={{ fontSize: 14 }}>Recent View</Text>
-                    <Text style={{ fontSize: 10 }}>All Digital SOP Guide</Text>
-                  </View>
-
-                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'center' }}>
-                    <View style={{ marginVertical: '5%' }}>
-                      <Pressable onPress={() => { console.log('press'); }}>
-                        <Ionicons
-                          name={'arrow-forward'}
-                          size={20}
-                          color={'black'}
-                        />
-                      </Pressable>
-                    </View>
-                  </View>
+              <View style={{ flexDirection: 'row', flex: 1 }}>
+                <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                  <Image
+                    source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                    style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                  />
+                  <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
                 </View>
-                <View style={{ flexDirection: 'row', flex: 1 }}>
-                  <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
-                    <Image
-                      source={require('../../Assets/Images/HomeScreen/itemImg.png')}
-                      style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
-                    />
-                    <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
-                  </View>
-                  <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
-                    <Image
-                      source={require('../../Assets/Images/HomeScreen/itemImg.png')}
-                      style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
-                    />
-                    <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
-                  </View>
-                </View>
-              </View>
-
-              <View style={{ paddingHorizontal: '8%' }}>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <View style={{ marginVertical: '5%' }}>
-                    <Text style={{ fontSize: 14 }}>PDF</Text>
-                    <Text style={{ fontSize: 10 }}>All Digital SOP Guide</Text>
-                  </View>
-
-
-                </View>
-                <View style={{ flexDirection: 'row', flex: 1 }}>
-                  <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
-                    <Image
-                      source={require('../../Assets/Images/HomeScreen/itemImg.png')}
-                      style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
-                    />
-                    <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
-                  </View>
-                  <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
-                    <Image
-                      source={require('../../Assets/Images/HomeScreen/itemImg.png')}
-                      style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
-                    />
-                    <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
-                  </View>
+                <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                  <Image
+                    source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                    style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                  />
+                  <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
                 </View>
               </View>
             </View>
-          </ScrollView>
-        </BottomSheet>
-      </SafeArea>
+
+            <View style={{ paddingHorizontal: '8%' }}>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View style={{ marginVertical: '5%' }}>
+                  <Text style={{ fontSize: 14 }}>Recent View</Text>
+                  <Text style={{ fontSize: 10 }}>All Digital SOP Guide</Text>
+                </View>
+
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'center' }}>
+                  <View style={{ marginVertical: '5%' }}>
+                    <Pressable onPress={() => { console.log('press'); }}>
+                      <Ionicons
+                        name={'arrow-forward'}
+                        size={20}
+                        color={'black'}
+                      />
+                    </Pressable>
+                  </View>
+                </View>
+              </View>
+              <View style={{ flexDirection: 'row', flex: 1 }}>
+                <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                  <Image
+                    source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                    style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                  />
+                  <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
+                </View>
+                <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                  <Image
+                    source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                    style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                  />
+                  <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
+                </View>
+              </View>
+            </View>
+
+            <View style={{ paddingHorizontal: '8%' }}>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View style={{ marginVertical: '5%' }}>
+                  <Text style={{ fontSize: 14 }}>PDF</Text>
+                  <Text style={{ fontSize: 10 }}>All Digital SOP Guide</Text>
+                </View>
+
+
+              </View>
+              <View style={{ flexDirection: 'row', flex: 1 }}>
+                <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                  <Image
+                    source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                    style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                  />
+                  <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
+                </View>
+                <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                  <Image
+                    source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                    style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                  />
+                  <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </ScrollView>
+      </BottomSheet>
     </>
   );
 };
