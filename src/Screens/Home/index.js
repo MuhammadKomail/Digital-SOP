@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useRef } from 'react';
-import { Dimensions, Image, ImageBackground, Pressable, ScrollView, View } from 'react-native';
+import { Dimensions, Image, Button , ImageBackground, Pressable, ScrollView, View } from 'react-native';
 import { Text } from 'react-native-paper';
 import { useSelector } from 'react-redux';
 import SafeArea from '../../Components/ReusableComponent/Safearea';
@@ -54,6 +54,7 @@ export const Home = () => {
                       />
                     </Pressable>
                   </View>
+                  <Button onPress={() => { Navigation.navigate('Camra'); }} title="Open Camera"/>
                   <View>
                     <Pressable onPress={() => { console.log('press'); }}>
                       <Ionicons
