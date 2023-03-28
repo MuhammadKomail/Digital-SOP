@@ -11,6 +11,7 @@ import { Login } from '../../Screens/Login';
 import CameraScreen from '../../Screens/CapturePhotoVideo';
 import { AddMessage } from '../../Screens/AddMessage';
 import { AddMoreDetail } from '../../Screens/AddMoreDetail';
+import {Camra} from '../../Screens/Camra';
 // import Loader from '../../Components/Loader';
 // import { PhotoVideo } from '../../Screens/CapturePhotoVideo';
 
@@ -32,6 +33,7 @@ export default function StackNavigator() {
         <Stack.Screen name="Notifications" component={Notifications} />
         <Stack.Screen name="Settings" component={Settings} />
         <Stack.Screen name="AddMoreDetail" component={AddMoreDetail} />
+        <Stack.Screen name="Camra" component={Camra} />
       </Stack.Navigator>
     </NavigationContainer>
   );
