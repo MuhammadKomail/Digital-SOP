@@ -21,7 +21,7 @@ export const Camra = () => {
   const device = camView === 'back' ? devices.back : devices.front;
 
   const cameraPermission = useCallback(async () => {
-    const permission = await Camera.requestMicrophonePermission();
+    const permission = await Camera.requestCameraPermission();
     if (permission === 'denied') {
       await Linking.openSettings();
     }
