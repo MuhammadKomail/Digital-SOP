@@ -12,8 +12,6 @@ import CameraScreen from '../../Screens/CapturePhotoVideo';
 import { AddMessage } from '../../Screens/AddMessage';
 import { AddMoreDetail } from '../../Screens/AddMoreDetail';
 import {Camra} from '../../Screens/Camra';
-// import Loader from '../../Components/Loader';
-// import { PhotoVideo } from '../../Screens/CapturePhotoVideo';
 
 export default function StackNavigator() {
   const Stack = createStackNavigator();
@@ -25,6 +23,7 @@ export default function StackNavigator() {
           headerShown: false,
         }}>
         <Stack.Screen name="login" component={Login} />
+        <Stack.Screen name="Camra" component={Camra} />
         <Stack.Screen name="CurveBottomBar" component={CurveBottomBar} />
         <Stack.Screen name="AddMessage" component={AddMessage} />
         <Stack.Screen name="Profile" component={Profile} />
@@ -33,7 +32,6 @@ export default function StackNavigator() {
         <Stack.Screen name="Notifications" component={Notifications} />
         <Stack.Screen name="Settings" component={Settings} />
         <Stack.Screen name="AddMoreDetail" component={AddMoreDetail} />
-        <Stack.Screen name="Camra" component={Camra} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -54,7 +54,6 @@ export const Home = () => {
                       />
                     </Pressable>
                   </View>
-                  <Button onPress={() => { Navigation.navigate('Camra'); }} title="Open Camera"/>
                   <View>
                     <Pressable onPress={() => { console.log('press'); }}>
                       <Ionicons
