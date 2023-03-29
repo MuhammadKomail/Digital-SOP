@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 import FlashMessage from 'react-native-flash-message';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-import SplashScreen from 'react-native-splash-screen';
 import StackNavigator from './src/Navigators/Stack';
-import { Provider, useDispatch, useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import { Store } from './src/Store';
 // import { Camera } from 'react-native-vision-camera';
 
@@ -34,9 +33,6 @@ const App = () => {
   //   const cameraPermission = await Camera.getCameraPermissionStatus()
   //   console.log('cameraPermission: ', cameraPermission);
   // }
-
-
-
 
   return (
     <Provider store={Store}>

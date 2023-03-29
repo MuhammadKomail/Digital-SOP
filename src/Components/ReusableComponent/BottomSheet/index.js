@@ -21,7 +21,7 @@ export default function BottomSheet(props) {
                         borderTopLeftRadius: 40,
                         borderTopRightRadius: 40,
                         alignSelf: 'center',
-                        zIndex: -100
+                        // marginBottom:50
                     },
                     wrapper: {
                         // zIndex: -500,

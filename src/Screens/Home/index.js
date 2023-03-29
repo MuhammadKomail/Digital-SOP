@@ -7,7 +7,6 @@ import SafeArea from '../../Components/ReusableComponent/Safearea';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Heading from '../../Components/ReusableComponent/Heading';
 import COLORS from '../../Assets/Style/Color';
-import BottomSheet from '../../Components/ReusableComponent/BottomSheet';
 
 export const Home = () => {
   const Navigation = useNavigation();
@@ -15,23 +14,13 @@ export const Home = () => {
   const { AuthReducer } = useSelector(state => state);
   console.log('reducerData: ', AuthReducer.userData);
 
-  const refRBSheet = useRef(null);
-  useEffect(() => {
-    // refRBSheet.current.open()
-  }, []);
-
-  const height = Dimensions.get('window').height;
-  const FilterHeight = height * 0.69;
-
-
-
   return (
     <>
       <SafeArea>
-        <View style={{ flex: 1, }}>
+        <View style={{ flex: 1, width: '100%', height: '100%', backgroundColor: 'pink' }}>
           <ImageBackground
             source={require('../../Assets/Images/HomeScreen/backImage.png')}
-            style={{ height: '82%', width: '100%' }}>
+            style={{ height: '100%', width: '100%' }}>
             <View style={{ margin: '5%' }}>
               {/* Header */}
               <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -65,7 +54,6 @@ export const Home = () => {
                       />
                     </Pressable>
                   </View>
-                  <Button onPress={() => { Navigation.navigate('Camra'); }} title="Open Camera"/>
                   <View>
                     <Pressable onPress={() => { console.log('press'); }}>
                       <Ionicons
@@ -79,10 +67,122 @@ export const Home = () => {
                 </View>
               </View>
             </View>
+            <View style={{alignSelf:'center',marginHorizontal:'8%',alignContent:'center',alignItems:'center'}}>
+              <Text style={{color:'white',fontSize:24,fontWeight:'bold'}}>Industrial Training</Text>
+              <Text style={{color:'white',fontSize:10,marginHorizontal:'20%',alignSelf:'center',alignItems:'center',alignContent:'center'}}>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</Text>
+            </View>
+            <View style={{ backgroundColor: '#EFF1FD', marginTop: 40, paddingBottom: 180, borderTopRightRadius: 50, borderTopLeftRadius: 50, paddingTop: 15 }}>
+              <ScrollView>
+                <View style={{ marginVertical: '5%' }}>
+
+                  <View style={{ paddingHorizontal: '8%' }}>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={{ marginVertical: '5%' }}>
+                        <Text style={{ fontSize: 14 }}>Recent View</Text>
+                        <Text style={{ fontSize: 10 }}>All Digital SOP Guide</Text>
+                      </View>
+
+                      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'center' }}>
+                        <View style={{ marginVertical: '5%' }}>
+                          <Pressable onPress={() => { console.log('press'); }}>
+                            <Ionicons
+                              name={'arrow-forward'}
+                              size={20}
+                              color={'black'}
+                            />
+                          </Pressable>
+                        </View>
+                      </View>
+                    </View>
+                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                      <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                        <Image
+                          source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                          style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                        />
+                        <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
+                      </View>
+                      <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                        <Image
+                          source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                          style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                        />
+                        <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
+                      </View>
+                    </View>
+                  </View>
+
+                  <View style={{ paddingHorizontal: '8%' }}>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={{ marginVertical: '5%' }}>
+                        <Text style={{ fontSize: 14 }}>Recent View</Text>
+                        <Text style={{ fontSize: 10 }}>All Digital SOP Guide</Text>
+                      </View>
+
+                      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'center' }}>
+                        <View style={{ marginVertical: '5%' }}>
+                          <Pressable onPress={() => { console.log('press'); }}>
+                            <Ionicons
+                              name={'arrow-forward'}
+                              size={20}
+                              color={'black'}
+                            />
+                          </Pressable>
+                        </View>
+                      </View>
+                    </View>
+                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                      <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                        <Image
+                          source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                          style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                        />
+                        <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
+                      </View>
+                      <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                        <Image
+                          source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                          style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                        />
+                        <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
+                      </View>
+                    </View>
+                  </View>
+
+                  <View style={{ paddingHorizontal: '8%' }}>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={{ marginVertical: '5%' }}>
+                        <Text style={{ fontSize: 14 }}>PDF</Text>
+                        <Text style={{ fontSize: 10 }}>All Digital SOP Guide</Text>
+                      </View>
+
+
+                    </View>
+                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                      <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                        <Image
+                          source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                          style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                        />
+                        <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
+                      </View>
+                      <View style={{ borderRadius: 10, width: '50%', marginHorizontal: '1%' }}>
+                        <Image
+                          source={require('../../Assets/Images/HomeScreen/itemImg.png')}
+                          style={{ width: '100%', height: 100, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                        />
+                        <Text style={{ padding: 5, fontSize: 10, backgroundColor: COLORS.white, borderBottomLeftRadius: 10, borderBottomRightRadius: 10 }}>Digital SOP For User Digital SOP For User</Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </ScrollView>
+            </View >
           </ImageBackground>
-        </View >
+
+        </View>
       </SafeArea>
-      <BottomSheet refRBSheets={refRBSheet} height={FilterHeight}>
+      {/* <BottomSheet refRBSheets={refRBSheet} height={FilterHeight}>
         <ScrollView>
           <View style={{ marginVertical: '5%' }}>
 
@@ -188,7 +288,7 @@ export const Home = () => {
             </View>
           </View>
         </ScrollView>
-      </BottomSheet>
+      </BottomSheet> */}
     </>
   );
 };
